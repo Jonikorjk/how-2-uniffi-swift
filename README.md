@@ -4,6 +4,8 @@ A 9×9 Sudoku zero-knowledge circuit written in Rust and exposed to Swift throug
 
 The circuit verifies a supplied solution without revealing it. It does not solve the puzzle.
 
+The circuit implementation is based on the work from [this repository](https://github.com/tomasdelclaux/ZK-SNARKs).
+
 ## Requirements
 
 - macOS with Xcode 26.2 and Swift 6.2.3
