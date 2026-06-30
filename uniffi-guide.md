@@ -282,13 +282,12 @@ case .connected:
 #### Enum with associated data
 
 A `UniFFI` enum can also store additional data inside its variants.
-The fields of variants must be named:
 
 ```rust
 #[derive(Clone, uniffi::Enum)]
 pub enum LoadingState {
     Idle,
-    Loading,
+    Loading(String),
     Success {
         value: String,
     },
@@ -308,8 +307,8 @@ let state = LoadingState.success(
 switch state {
 case .idle:
     print("Idle")
-case .loading:
-    print("Loading")
+case .loading(let str):
+    print("Loading" + str)
 case .success(let value):
     print(value)
 case .failure(let message, let code):
@@ -912,7 +911,7 @@ After that, the Swift Package will be generated. You can add it to your project 
 
 ## Final Thoughts
 
-Yeah, if you usually work with only one language, it can be difficult to understand what is happening under the hood. But if you are reading this article, I guess you are already working with some niche technologies. Knowing the basics of Rust will help you grow as an iOS engineer, not just as a SwiftUI specialist. It also gives you more freedom to solve non-trivial tasks faster, without additional discussions or waiting for help from other engineers. Believe me, it will help you a lot.
+Yeah, if you usually work with only one language, it can be difficult to understand what is happening under the hood. But if you are reading this article, I guess you are already working with some niche technologies. Knowing the basics of Rust will help you grow as an iOS engineer, not just as a SwiftUI specialist. It also gives you more freedom to solve non-trivial tasks faster, without additional discussions or waiting for help from other engineers. 
 
 I didn’t cover all the UniFFI functionality, such as bridging the Tokio runtime for async work or some additional macros that are mostly useful for improving code quality. You can explore these features by yourself in the official documentation. I hope I gave you a basic understanding of what UniFFI is and how you can easily bridge Rust code to Swift.
 
