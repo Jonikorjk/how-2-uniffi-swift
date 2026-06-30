@@ -1,0 +1,22 @@
+[package]
+name = "zudoku"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "zudoku"
+path = "src/lib.rs"
+
+[dependencies]
+uniffi ={ version = "0.31.1", features = ["cli"] }
+ark-ff = "0.4"
+ark-ec = "0.4"
+ark-bls12-381 = "0.4"
+ark-r1cs-std = "0.4"
+ark-snark = "0.4"
+ark-relations = "0.4"
+ark-groth16 = "0.4"
+ark-std = "0.4"
+
+[dev-dependencies]
+itertools = "0.10.1"

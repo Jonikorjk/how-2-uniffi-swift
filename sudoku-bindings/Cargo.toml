@@ -1,0 +1,27 @@
+[package]
+name = "sudoku-bindings"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["staticlib", "lib"]
+name = "sudoku_bindings"
+
+[dependencies]
+uniffi = "0.31"
+thiserror = "2.0.18"
+
+zudoku = { path = "../Zudoku" }
+
+
+ark-ff = "0.4"
+ark-ec = "0.4"
+ark-bls12-381 = "0.4"
+ark-r1cs-std = "0.4"
+ark-snark = "0.4"
+ark-relations = "0.4"
+ark-groth16 = "0.4"
+ark-std = "0.4"
+
