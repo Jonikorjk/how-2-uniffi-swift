@@ -1,6 +1,6 @@
 ## Guide
 
-Read [The Complete Guide to Bridging Rust with Swift Using UniFFI](Uniffi.md) for a detailed explanation of the integration process, exported APIs, custom types, error handling, and the zero-knowledge Sudoku example.
+Read [The Complete Guide to Bridging Rust with Swift Using UniFFI](uniffi-guide.md) for a detailed explanation of the integration process, exported APIs, custom types, error handling, and the zero-knowledge Sudoku example.
 
 ## SudokuCircuit
 
